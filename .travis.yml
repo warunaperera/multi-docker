@@ -19,4 +19,17 @@ after_success:
   - docker push warunakanishka/multi-nginx
   - docker push warunakanishka/multi-server
   - docker push warunakanishka/multi-worker
+deploy:
+    edge: true
+    provider: elasticbeanstalk
+    region: us-east-2
+    app: multi-docker
+    env: MultiDocker-env
+    bucket_name: elasticbeanstalk-us-east-2-214202161889
+    bucket_path: docker-multi
+    on:
+      branch: master
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY 
+    
 

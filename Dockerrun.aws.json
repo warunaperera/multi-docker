@@ -2,7 +2,7 @@
     "AWSEBDockerrunVersion": 2,
     "containerDefinitions": [
         {
-            "name":"client",
+            "name":"uvindu",
             "image":"warunakanishka/multi-client",
             "hostname": "client",
             "essential": false,
